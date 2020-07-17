@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Callmain</string>
+    <string name="savedata_public_key">com.mycompany.PUBLIC_FILE_KEY</string>
+</resources>
