@@ -1,10 +1,4 @@
 package com.example.bfsookmyung;
-//초기 설정 화면(장애학생인지 비장애학생인지 결정하는 창), 수정해야됨!
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -19,7 +13,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 public class MainActivity extends AppCompatActivity {
+
 
     public Button button1,button2,button3,button4;
     private final int MY_PERMISSION_REQUEST_SMS=1001;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
             if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.SEND_SMS)){
@@ -128,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+    //////오은 새로운 push
         button4.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -137,12 +139,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    /**
-     * 권한 요청에 대한 응답을 이곳에서 가져온다.
-     *
-     * @param requestCode 요청코드
-     * @param permissions 사용자가 요청한 권한들
-     * @param grantResults 권한에 대한 응답들(인덱스별로 매칭)
+    /*
+      권한 요청에 대한 응답을 이곳에서 가져온다.
+
+      @param requestCode 요청코드
+      @param permissions 사용자가 요청한 권한들
+      @param grantResults 권한에 대한 응답들(인덱스별로 매칭)
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
