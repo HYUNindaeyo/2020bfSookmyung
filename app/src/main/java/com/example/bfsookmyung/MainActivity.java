@@ -1,5 +1,5 @@
 package com.example.bfsookmyung;
-
+//초기 설정 화면(장애학생인지 비장애학생인지 결정하는 창), 수정해야됨!
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
